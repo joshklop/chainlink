@@ -74,12 +74,13 @@ func (l *RandomnessRequestLog) Equal(ol RandomnessRequestLog) bool {
 func RawRandomnessRequestLogToRandomnessRequestLog(
 	l *RawRandomnessRequestLog) *RandomnessRequestLog {
 	return &RandomnessRequestLog{
-		KeyHash: l.KeyHash,
-		Seed:    l.Seed,
-		JobID:   l.JobID,
-		Sender:  l.Sender,
-		Fee:     (*assets.Link)(l.Fee),
-		Raw:     *l,
+		KeyHash:   l.KeyHash,
+		Seed:      l.Seed,
+		JobID:     l.JobID,
+		Sender:    l.Sender,
+		Fee:       (*assets.Link)(l.Fee),
+		RequestID: l.RequestID,
+		Raw:       *l,
 	}
 }
 
